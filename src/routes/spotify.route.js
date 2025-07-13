@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.get("/top-tracks", ensureValidAccessToken, getTop10Tracks);
 router.get("/currently-playing", ensureValidAccessToken, getCurrentlyPlaying);
-router.get("/pause", ensureValidAccessToken, pausePlayback);
-router.get("/play", ensureValidAccessToken, playTrack);
+router.put("/pause", ensureValidAccessToken, pausePlayback);
+router.put("/play", ensureValidAccessToken, playTrack);
 
 module.exports = router;
